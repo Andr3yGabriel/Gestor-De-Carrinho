@@ -2,6 +2,11 @@
     <div :class="['update-container', darkMode ? 'dark' : 'light']">
         <nav class="buttons">
             <Button
+                icon="pi pi-user"
+                @click="goToProfile"
+                :class="darkMode ? 'dark-button' : 'light-button'"
+            />
+            <Button
                 :icon="darkMode ? 'pi pi-moon' : 'pi pi-sun'"
                 @click="toggleDarkMode"
                 :class="darkMode ? 'dark-button' : 'light-button'"
@@ -96,6 +101,9 @@
                 },
                 goToLogin: () => {
                     window.location.href = '/login';
+                },
+                goToProfile: () => {
+                    window.location.href = '/profile';
                 },
                 price,
                 name,

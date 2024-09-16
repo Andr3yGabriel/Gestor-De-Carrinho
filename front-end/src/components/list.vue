@@ -9,7 +9,7 @@
         :class="darkMode ? 'dark-button' : 'light-button'"
       />
       <Button
-        label="Voltar para Home"
+        label="Voltar"
         @click="goToHome"
         :class="darkMode ? 'dark-button' : 'light-button'"
       />

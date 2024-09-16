@@ -6,6 +6,11 @@
                 @click="goToList"
                 :class="darkMode ? 'dark-button' : 'light-button'"
             />
+            <Button
+                icon="pi pi-user"
+                @click="goToProfile"
+                :class="darkMode ? 'dark-button' : 'light-button'"
+            />
             <Button 
                 icon="pi pi-trash"
                 @click="removeProduct"
@@ -134,7 +139,10 @@ import axios, { AxiosError } from 'axios';
                 removeProduct,
                 goToUpdate: () => {
                     window.location.href = 'update';
-                }
+                },
+                goToProfile: () => {
+                    window.location.href = '/profile';
+                }                
             };
         }
     })
